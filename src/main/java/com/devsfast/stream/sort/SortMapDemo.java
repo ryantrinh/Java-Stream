@@ -47,8 +47,18 @@ public class SortMapDemo {
         employeeMap.put(new Employee("Moon Trinh","OG", 67000), 400);
         employeeMap.put(new Employee("Rio Trinh","MP", 50000), 600);
 
-        System.out.println(employeeMap);
+//        System.out.println(employeeMap);
 
+        //Sorted by Key
+//        employeeMap.entrySet().stream()
+//                .sorted(Map.Entry.comparingByKey((o1, o2) -> (int) (o2.getSalary()-o1.getSalary())))
+//                .forEach(employeeIntegerEntry -> System.out.println(employeeIntegerEntry));
+
+        //Sorted by Value
+
+        employeeMap.entrySet().stream()
+                .sorted(Map.Entry.comparingByValue((o1, o2) -> o2.compareTo(o1)))
+                .forEach(employeeIntegerEntry -> System.out.println(employeeIntegerEntry));
 
 
     }
