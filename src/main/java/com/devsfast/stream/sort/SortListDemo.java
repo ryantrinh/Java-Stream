@@ -4,6 +4,7 @@ import com.devsfast.stream.api.Database;
 import com.devsfast.stream.api.Employee;
 
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class SortListDemo {
@@ -14,7 +15,9 @@ public class SortListDemo {
         //ASC
 //        Collections.sort(employees, (o1, o2) -> (int) (o1.getSalary() - o2.getSalary()));
         //DES
-        Collections.sort(employees, (o1, o2) -> (int) (o2.getSalary() - o1.getSalary()));
+//        Collections.sort(employees, (o1, o2) -> (int) (o2.getSalary() - o1.getSalary()));
+
+        Collections.sort(employees, new MyComparator());
 
         printList(employees);
 
@@ -23,5 +26,12 @@ public class SortListDemo {
         employees.forEach(employee -> System.out.println(employee));
     }
 
+}
+
+class MyComparator implements Comparator<Employee>{
+    @Override
+    public int compare(Employee o1, Employee o2) {
+        return o1.getDepartment().compareTo(o2.getDepartment());
+    }
 }
 
