@@ -7,8 +7,10 @@ public class Database {
     public static List<Employee> getEmployees(){
         List<Employee> employees = Arrays.asList(
                 new Employee("Trung","IT",120000.0),
-                new Employee("Ryan","CIV",110000.0),
-                new Employee("Moon","EOR",90000.0)
+                new Employee("Ryan","CIV",200000.0),
+                new Employee("Moon","IT",90000.0),
+                new Employee("Rio","IT",90000.0),
+                new Employee("Elise","CIV",90000.0)
         );
 
         return employees;
