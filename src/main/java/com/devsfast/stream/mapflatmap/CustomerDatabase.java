@@ -12,7 +12,10 @@ public class CustomerDatabase {
                         1,"Trung","trung@gmail.com", Arrays.asList("9999999","888888","777777")
                 ),
                 new Customer(
-                        1,"Ryan","ryan@gmail.com", Arrays.asList("9999999","888888","777777")
+                        2,"Ryan","ryan@gmail.com", Arrays.asList("44444","555555","666666")
+                ),
+                new Customer(
+                        3,"moon","moon@gmail.com", Arrays.asList("111111","222222","33333")
                 )
         ).collect(Collectors.toList());
     }
